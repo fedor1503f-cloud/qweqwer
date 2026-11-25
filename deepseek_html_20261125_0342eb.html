@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Открываем приложение...</title>
+    <script>
+        // Читаем параметр "button" из адреса страницы
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetUrl = urlParams.get('button');
+        
+        if (targetUrl) {
+            // Перенаправляем на happ://add/... (или другую ссылку)
+            window.location.href = targetUrl;
+        } else {
+            document.body.innerHTML = "Ошибка: ссылка для перехода не найдена.";
+        }
+    </script>
+</head>
+<body>
+    <p>Перенаправление в приложение...</p>
+</body>
+</html>
